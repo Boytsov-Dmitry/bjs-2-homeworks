@@ -25,7 +25,7 @@ function calculateTotalMortgage(percent, contribution, amount, countMonths) {
   let creditBody = amount - contribution;
   let paymentPerMonth = creditBody * (percent + (percent / (((1 + percent)**countMonths) - 1)));
   let fullPayment = Number((paymentPerMonth * countMonths).toFixed(2));
-  console.log(fullPayment);
+  return fullPayment;
 }
 
 calculateTotalMortgage(10, 1000, 50000, 12)
